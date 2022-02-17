@@ -6,6 +6,7 @@ import { LeftComponent } from './left/left.component';
 import { CenterComponent } from './center/center.component';
 import { RightComponent } from './right/right.component';
 import {DemoService} from "./_services/demo.service";
+import {SampleModule} from "./sample/sample.module";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {DemoService} from "./_services/demo.service";
     RightComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SampleModule
   ],
   providers: [
     DemoService

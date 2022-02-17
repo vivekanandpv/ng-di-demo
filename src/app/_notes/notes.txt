@@ -1,5 +1,6 @@
 Steps:
-1. Remove providedIn: root from service so that it is not provided in the root injector
-2. Now, providedIn removed, the injection fails in components
-3. We now provide this service manually at the module level. In app.module.ts, providers array has DemoService
-4. Service still appears to be singleton, but only to the extent of the module
+1. Created the sample module and inside there is a banner component.
+Banner component gets injected with DemoService.
+2. SampleModule doesn't provide the DemoService, but AppModule (root module) does.
+3. Also, if root module doesn't and SampleModule does, by virtue of import,
+root gets the DemoService.

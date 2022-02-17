@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {DemoService} from "../_services/demo.service";
 
 @Component({
-  selector: 'app-center',
-  templateUrl: './center.component.html',
-  styleUrls: ['./center.component.scss'],
-  providers: [DemoService]
+  selector: 'app-flash',
+  templateUrl: './flash.component.html',
+  styleUrls: ['./flash.component.scss']
 })
-export class CenterComponent implements OnInit {
+export class FlashComponent implements OnInit {
 
   constructor(public demoService: DemoService) { }
 

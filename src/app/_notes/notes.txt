@@ -1,6 +1,4 @@
 Steps:
-1. Created the sample module and inside there is a banner component.
-Banner component gets injected with DemoService.
-2. SampleModule doesn't provide the DemoService, but AppModule (root module) does.
-3. Also, if root module doesn't and SampleModule does, by virtue of import,
-root gets the DemoService.
+Center component provides for DemoService, so Center and its children (Flash) get a different instance of the
+DemoService
+

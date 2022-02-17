@@ -7,13 +7,15 @@ import { CenterComponent } from './center/center.component';
 import { RightComponent } from './right/right.component';
 import {DemoService} from "./_services/demo.service";
 import {SampleModule} from "./sample/sample.module";
+import { FlashComponent } from './flash/flash.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LeftComponent,
     CenterComponent,
-    RightComponent
+    RightComponent,
+    FlashComponent
   ],
   imports: [
     BrowserModule,

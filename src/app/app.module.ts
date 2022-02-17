@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { LeftComponent } from './left/left.component';
 import { CenterComponent } from './center/center.component';
 import { RightComponent } from './right/right.component';
+import {DemoService} from "./_services/demo.service";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { RightComponent } from './right/right.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    DemoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

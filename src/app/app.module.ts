@@ -18,7 +18,10 @@ import {DemoService} from "./_services/demo.service";
     BrowserModule
   ],
   providers: [
-    DemoService
+    {
+      provide: DemoService,
+      useClass: DemoService
+    }
   ],
   bootstrap: [AppComponent]
 })

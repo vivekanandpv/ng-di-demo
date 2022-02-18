@@ -1,5 +1,9 @@
 Steps:
-1. Remove providedIn: root from service so that it is not provided in the root injector
-2. Now, providedIn removed, the injection fails in components
-3. We now provide this service manually at the module level. In app.module.ts, providers array has DemoService
-4. Service still appears to be singleton, but only to the extent of the module
+When the dependency is registered in providers, Angular expands it to
+
+{
+ provide: <token>,
+ useClass: <dependency>
+}
+
+This is explicitly mentioned in AppModule now

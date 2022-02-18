@@ -1,4 +1,3 @@
-By default, the name of the class of the dependency is the token. We can change it by
-specifying a custom injection token and provide for this token. But the resolution at
-the injection site must have @Inject(token) for the dependency. Check the AppModule and
-component codes.
+A custom instance of the service is assigned to useValue
+
+This is helpful in some rare dynamic loading scenarios (such as configuration)

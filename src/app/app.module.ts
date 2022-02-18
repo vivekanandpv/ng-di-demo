@@ -9,6 +9,9 @@ import {DemoService} from "./_services/demo.service";
 
 export const DEMO_SERVICE = new InjectionToken<DemoService>('DEMO_SERVICE');
 
+const demoServiceInstance = new DemoService();
+demoServiceInstance.randomNumber = 100.256;
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,7 @@ export const DEMO_SERVICE = new InjectionToken<DemoService>('DEMO_SERVICE');
   providers: [
     {
       provide: DEMO_SERVICE,
-      useClass: DemoService
+      useValue: demoServiceInstance
     }
   ],
   bootstrap: [AppComponent]

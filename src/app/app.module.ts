@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {InjectionToken, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -6,6 +6,8 @@ import { LeftComponent } from './left/left.component';
 import { CenterComponent } from './center/center.component';
 import { RightComponent } from './right/right.component';
 import {DemoService} from "./_services/demo.service";
+
+export const DEMO_SERVICE = new InjectionToken<DemoService>('DEMO_SERVICE');
 
 @NgModule({
   declarations: [
@@ -19,7 +21,7 @@ import {DemoService} from "./_services/demo.service";
   ],
   providers: [
     {
-      provide: DemoService,
+      provide: DEMO_SERVICE,
       useClass: DemoService
     }
   ],

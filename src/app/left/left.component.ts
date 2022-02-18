@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {DemoService} from "../_services/demo.service";
+import {DEMO_SERVICE} from "../app.module";
 
 @Component({
   selector: 'app-left',
@@ -8,7 +9,7 @@ import {DemoService} from "../_services/demo.service";
 })
 export class LeftComponent implements OnInit {
 
-  constructor(public demoService: DemoService) { }
+  constructor(@Inject(DEMO_SERVICE) public demoService: DemoService) { }
 
   ngOnInit(): void {
   }
